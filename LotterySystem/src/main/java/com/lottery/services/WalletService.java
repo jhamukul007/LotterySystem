@@ -3,6 +3,7 @@ package com.lottery.services;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -64,7 +65,8 @@ public class WalletService extends BaseServices {
 	}
 	
 	public Wallet getById(String walletId) {
-		return walletRepository.findById(walletId);
+		Optional<Wallet> wallet=walletRepository.findById(walletId);
+		return wallet.get();
 	}
 	
 	public List<Wallet> findAll(){

@@ -1,6 +1,7 @@
 package com.lottery.services;
 
 import java.util.Date;
+import java.util.Optional;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -209,7 +210,8 @@ public class LobbyService extends BaseServices {
 	}
 
 	public LotteryLobby findById(String lobbyId) {
-		return lobbyRepository.findById(lobbyId);
+		Optional<LotteryLobby> lobby=lobbyRepository.findById(lobbyId);
+		return lobby.get();
 	}
 
 	public void saveOrUpdate(LotteryLobby lobby) {

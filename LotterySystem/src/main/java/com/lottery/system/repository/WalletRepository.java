@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import com.lottery.system.beans.Wallet;
 
-public class WalletRepository implements BaseRepository<Wallet, Long> {
+public class WalletRepository implements BaseRepository<Wallet, String> {
 
 	@Override
 	public <S extends Wallet> S save(S entity) {
@@ -19,13 +19,13 @@ public class WalletRepository implements BaseRepository<Wallet, Long> {
 	}
 
 	@Override
-	public Optional<Wallet> findById(Long id) {
+	public Optional<Wallet> findById(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean existsById(Long id) {
+	public boolean existsById(String id) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -37,7 +37,7 @@ public class WalletRepository implements BaseRepository<Wallet, Long> {
 	}
 
 	@Override
-	public Iterable<Wallet> findAllById(Iterable<Long> ids) {
+	public Iterable<Wallet> findAllById(Iterable<String> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -49,7 +49,7 @@ public class WalletRepository implements BaseRepository<Wallet, Long> {
 	}
 
 	@Override
-	public void deleteById(Long id) {
+	public void deleteById(String id) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -73,21 +73,7 @@ public class WalletRepository implements BaseRepository<Wallet, Long> {
 	}
 
 	@Override
-	public Wallet findById(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Wallet findByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public void saveOrUpdate(Wallet t) {
-		// TODO Auto-generated method stub
-		
-	}
-
-}
+	}}

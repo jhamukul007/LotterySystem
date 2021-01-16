@@ -7,7 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BaseRepository<T extends Serializable, ID extends Serializable> extends CrudRepository<T, ID> {
-	T findById(String id);
 	T findByName(String name);
-	void saveOrUpdate(T t);
 }

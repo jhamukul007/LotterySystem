@@ -76,21 +76,9 @@ public class LobbyInfoRepository implements BaseRepository<LobbyInfo, Long>{
 	}
 
 	@Override
-	public LobbyInfo findById(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public LobbyInfo findByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@Override
-	public void saveOrUpdate(LobbyInfo t) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 }

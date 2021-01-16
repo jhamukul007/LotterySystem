@@ -73,20 +73,7 @@ public class UserRepository implements BaseRepository<User, Long>{
 	}
 
 	@Override
-	public User findById(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public User findByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public void saveOrUpdate(User t) {
-		// TODO Auto-generated method stub
-		
-	}
-}
+	}}

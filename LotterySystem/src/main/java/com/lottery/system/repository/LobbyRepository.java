@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.lottery.system.beans.LotteryLobby;
 
 @Repository
-public class LobbyRepository implements BaseRepository<LotteryLobby, Long> {
+public class LobbyRepository implements BaseRepository<LotteryLobby, String> {
 
 	@Override
 	public <S extends LotteryLobby> S save(S entity) {
@@ -22,13 +22,13 @@ public class LobbyRepository implements BaseRepository<LotteryLobby, Long> {
 	}
 
 	@Override
-	public Optional<LotteryLobby> findById(Long id) {
+	public Optional<LotteryLobby> findById(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean existsById(Long id) {
+	public boolean existsById(String id) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -40,7 +40,7 @@ public class LobbyRepository implements BaseRepository<LotteryLobby, Long> {
 	}
 
 	@Override
-	public Iterable<LotteryLobby> findAllById(Iterable<Long> ids) {
+	public Iterable<LotteryLobby> findAllById(Iterable<String> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -52,7 +52,7 @@ public class LobbyRepository implements BaseRepository<LotteryLobby, Long> {
 	}
 
 	@Override
-	public void deleteById(Long id) {
+	public void deleteById(String id) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -76,21 +76,7 @@ public class LobbyRepository implements BaseRepository<LotteryLobby, Long> {
 	}
 
 	@Override
-	public LotteryLobby findById(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public LotteryLobby findByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public void saveOrUpdate(LotteryLobby t) {
-		// TODO Auto-generated method stub
-		
-	}
-
-}
+	}}
