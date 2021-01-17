@@ -26,10 +26,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@ToString
 @Entity
 @Table(name = "lobby")
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
 public @Data class LotteryLobby implements Serializable{
 	/**
 	 * 

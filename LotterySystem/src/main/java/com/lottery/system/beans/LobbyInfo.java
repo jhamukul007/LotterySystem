@@ -18,11 +18,12 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@ToString
 @Entity
 @Table(name = "lobby_info")
-public @Data class LobbyInfo implements Serializable {
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
+@Data
+public class LobbyInfo implements Serializable {
 	
 	/**
 	 * 
@@ -51,10 +52,6 @@ public @Data class LobbyInfo implements Serializable {
 	
 	@Column(name="end_time",nullable = true)
 	private Date endTime;
-	
-	@OneToOne
-	@JoinColumn(name ="lobby_id", nullable = true)
-	private LotteryLobby lobby;
 	
 	@OneToOne
 	@JoinColumn(name="user_id",nullable = false)

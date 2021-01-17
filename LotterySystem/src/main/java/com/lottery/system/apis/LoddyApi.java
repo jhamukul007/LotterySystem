@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.lottery.services.LobbyService;
 import com.lottery.system.beans.User;
 import com.lottery.system.constants.LottaryLoddyApiConstants;
 
 @RequestMapping(value = LottaryLoddyApiConstants.LOBBY)
-public class LoddyApi {
+@RestController
+public class LoddyApi extends BaseApi {
 	
 	@Autowired
 	private LobbyService lobbyService;

@@ -9,11 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import com.lottery.system.beans.User;
 import com.lottery.system.beans.Wallet;
 import com.lottery.system.repository.WalletRepository;
+import com.lottery.system.util.RandomGenerator;
 
 @Service
 public class WalletService extends BaseServices {
+	
 	@Autowired
 	private WalletRepository walletRepository;
 	
@@ -89,8 +92,22 @@ public class WalletService extends BaseServices {
 			saveOrUpdate(wallet);
 		}
 	}
+	public Wallet createDefaultWallet() {
+		Wallet wallet=new Wallet();
+		wallet.setName(getDefaultWalletName());
+		wallet.setAmount(0l);
+		wallet.setUser(new User());
+		saveOrUpdate(wallet);
+		return wallet;
+	}
 	
 	public void saveOrUpdate(Wallet wallet) {
 		walletRepository.save(wallet);
+	}
+	
+	public String getDefaultWalletName() {
+		RandomGenerator<String> generator=new RandomGenerator.RandomGeneratorBuilder<String>().build();
+		String defaultName=generator.getRandomIdentifier();
+		return defaultName;
 	}
 }

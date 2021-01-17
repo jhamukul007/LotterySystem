@@ -1,5 +1,8 @@
 package com.lottery.services;
 
-public class BaseServices {
+import org.springframework.stereotype.Service;
+
+@Service
+public class BaseServices extends AbstractService {
 
 }

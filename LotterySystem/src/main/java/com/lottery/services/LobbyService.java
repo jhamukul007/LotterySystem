@@ -173,10 +173,9 @@ public class LobbyService extends BaseServices {
 			saveOrUpdate(lobby);
 		}
 	}
-
-	@SuppressWarnings("rawtypes")
+	
 	public String getLobbyNewName() {
-		RandomGenerator<String> generator=new RandomGenerator.RandomGeneratorBuilder().build();
+		RandomGenerator<String> generator=new RandomGenerator.RandomGeneratorBuilder<String>().build();
 		String lobbyName=generator.getRandomIdentifier();
 		System.out.println("Auto generated Lobby Name "+lobbyName);
 		return lobbyName;
